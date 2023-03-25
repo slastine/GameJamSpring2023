@@ -48,7 +48,7 @@ MonoBehaviour:
   - name: hop
     clip: {fileID: 8300000, guid: f30efc0f98d02ca43860bfef31666b93, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 3
     source: {fileID: 0}
   - name: footstep
     clip: {fileID: 8300000, guid: bcd7a3a4b24c140419b5b9d8daa97555, type: 3}
@@ -64,4 +64,9 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: dd9defca3ed34e94db2149da40757f81, type: 3}
     volume: 1
     pitch: 0
+    source: {fileID: 0}
+  - name: theme
+    clip: {fileID: 8300000, guid: 092ad98b05803b140a60ac11ddaa0bdf, type: 3}
+    volume: 0.125
+    pitch: 3
     source: {fileID: 0}

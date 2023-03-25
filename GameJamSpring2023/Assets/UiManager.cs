@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class MainMenuUi : MonoBehaviour
+public class UiManager : MonoBehaviour
 {
     public static float MasterVol = 1f;
     public static float SfxVol = 1f;
@@ -16,7 +16,7 @@ public class MainMenuUi : MonoBehaviour
 
     public void StartGame() => SceneManager.LoadScene(1);
 
-    public void UpdateMasterVol() => MasterVol = MasterVolSlider.value;
+    public void UpdateMasterVol() => AudioListener.volume = MasterVolSlider.value;
     public void UpdateSfxVol() => SfxVol = SfxVolSlider.value * MasterVol;
-    public void UpdateMusicVol() => AudioListener.volume = MusicVolSlider.value * MasterVol;
+    public void UpdateMusicVol() => MusicVol = MusicVolSlider.value * MasterVol;
 }

@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space) && grounded && Mathf.Abs(rb.velocity.y) <= .01f)
         {
-            FindObjectOfType<audioManager>()?.Play("hop");
+            FindObjectOfType<audioManager>().Play("hop");
             rb.AddForce(Vector2.up * thrust, ForceMode2D.Impulse);
             Debug.Log("Hop");
             
