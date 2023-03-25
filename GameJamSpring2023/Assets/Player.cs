@@ -25,12 +25,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(Camera.main.WorldToViewportPoint(this.transform.position));
+        //Debug.Log(Camera.main.WorldToViewportPoint(this.transform.position));
         float input = Input.GetAxis("Horizontal");
         //
-        if (Input.GetKey(KeyCode.Space) && grounded && rb.velocity.y == 0)
+        if (Input.GetKey(KeyCode.Space) && grounded && Mathf.Abs(rb.velocity.y) <= .01f)
         {
             rb.AddForce(Vector2.up * thrust, ForceMode2D.Impulse);
+            Debug.Log("Hop");
         }
 
         rb.velocity = new Vector2(input * 15, rb.velocity.y);
