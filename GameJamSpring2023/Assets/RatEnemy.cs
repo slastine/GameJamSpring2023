@@ -12,25 +12,26 @@ public class RatEnemy : MonoBehaviour
     {
         StartCoroutine("GoToPos1");
     }
-    IEnumerator GoToPos1()
-    {
 
-        while (Vector2.Distance((Vector2)rat.transform.position, pos2) > .1f)
+    IEnumerator GoToPos(Vector2 target)
+    {
+        while (Vector2.Distance((Vector2)rat.transform.position, target) > .1f)
         {
-            rat.transform.position = Vector2.MoveTowards(rat.transform.position, pos2, .01f);
+            transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = (target - (Vector2)rat.transform.position).x < 0;
+            rat.transform.position = Vector2.MoveTowards(rat.transform.position, target, .01f);
             yield return null;
         }
+    }
+
+    IEnumerator GoToPos1()
+    {
+        yield return GoToPos(pos1);
         StartCoroutine("GoToPos2");
     }
 
     IEnumerator GoToPos2()
     {
-
-        while (Vector2.Distance((Vector2)rat.transform.position, pos1) > .1f)
-        {
-            rat.transform.position = Vector2.MoveTowards(rat.transform.position, pos1, .01f);
-            yield return null;
-        }
+        yield return GoToPos(pos2);
         StartCoroutine("GoToPos1");
     }
 }

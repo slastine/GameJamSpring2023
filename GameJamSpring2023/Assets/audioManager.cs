@@ -12,7 +12,6 @@ public class audioManager : MonoBehaviour
     {
         MainMenuUi.MusicVolumeChanged += (v) =>
             theme.source.volume = v * theme.volume;
-
         MainMenuUi.SfxVolumeChanged += (v) =>
         {
             foreach (var s in sounds) 

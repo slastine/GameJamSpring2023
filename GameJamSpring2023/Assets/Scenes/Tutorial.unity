@@ -13719,9 +13719,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rat
       objectReference: {fileID: 0}
-    - target: {fileID: 5142434783267608499, guid: 79d862b2dd7e22243819cbff606e4059, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79d862b2dd7e22243819cbff606e4059, type: 3}
