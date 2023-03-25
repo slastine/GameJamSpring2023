@@ -914,9 +914,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00896f44e6d18bd46b1c11eb2f1e8a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: 2
+  Offset: 1
   Chain: {fileID: 5684218349393734404, guid: d1963536d64dac440b1b79776f51a137, type: 3}
-  Count: 16
+  Count: 32
   Player: {fileID: 204400733}
 --- !u!50 &1204662393
 Rigidbody2D:
