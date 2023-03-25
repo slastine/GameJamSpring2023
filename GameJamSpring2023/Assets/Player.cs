@@ -32,7 +32,9 @@ public class Player : MonoBehaviour
         {
             rb.AddForce(Vector2.up * thrust, ForceMode2D.Impulse);
         }
-        transform.Translate(Vector3.right * Time.deltaTime * input * 15);
+
+        rb.velocity = new Vector2(input * 15, rb.velocity.y);
+        //transform.Translate(Vector3.right * Time.deltaTime * input * 15);
 
         //update animator
         if(input == 0)
