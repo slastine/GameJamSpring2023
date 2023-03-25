@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1441825390779218303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6291696021385362103}
+  - component: {fileID: -9194444338107903362}
+  m_Layer: 0
+  m_Name: Audio Shenanigans
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6291696021385362103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441825390779218303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-9194444338107903362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441825390779218303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ab9b71a132f44c4e8391e1bffed4aa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: hop
+    clip: {fileID: 8300000, guid: f30efc0f98d02ca43860bfef31666b93, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: footstep
+    clip: {fileID: 8300000, guid: bcd7a3a4b24c140419b5b9d8daa97555, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: landing
+    clip: {fileID: 8300000, guid: 9b6fba7ac498d1b4f8a27ec927146567, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: connection
+    clip: {fileID: 8300000, guid: dd9defca3ed34e94db2149da40757f81, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}

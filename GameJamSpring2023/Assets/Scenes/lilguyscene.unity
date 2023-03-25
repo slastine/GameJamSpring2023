@@ -261,6 +261,21 @@ MonoBehaviour:
     volume: 1
     pitch: 0
     source: {fileID: 0}
+  - name: jumps
+    clip: {fileID: 8300000, guid: f30efc0f98d02ca43860bfef31666b93, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: landing
+    clip: {fileID: 8300000, guid: 9b6fba7ac498d1b4f8a27ec927146567, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: connection
+    clip: {fileID: 8300000, guid: dd9defca3ed34e94db2149da40757f81, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
 --- !u!4 &380189130
 Transform:
   m_ObjectHideFlags: 0

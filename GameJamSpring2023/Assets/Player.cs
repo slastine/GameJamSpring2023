@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
         {
             rb.AddForce(Vector2.up * thrust, ForceMode2D.Impulse);
             Debug.Log("Hop");
+            FindObjectOfType<audioManager>().Play("hop");
         }
 
         //rb.AddForce(Vector2.right * input * 250);
