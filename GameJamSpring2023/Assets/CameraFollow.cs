@@ -36,5 +36,7 @@ public class CameraFollow : MonoBehaviour
         {
             cam.transform.Translate(Vector3.up * Time.deltaTime * 15);
         }
+        if (cam.transform.position.x < minX) cam.transform.position = new Vector3(minX, cam.transform.position.y, -10) ;
+        if (cam.transform.position.y  < minY) cam.transform.position = new Vector3(cam.transform.position.x, minY, -10);
     }
 }
