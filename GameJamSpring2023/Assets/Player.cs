@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
         //if ferret is moving right, alert the animator
         if (input > 0)
         {
-            if(!animator.GetBool("isMovingRight"))
+            if(!animator.GetBool("isMovingRight") && grounded)
             {
                 animator.ResetTrigger("spin");
                 animator.SetTrigger("spin");
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
         }
         else if (input < 0)
         {
-            if(animator.GetBool("isMovingRight"))
+            if(animator.GetBool("isMovingRight") && grounded)
             {
                 animator.ResetTrigger("spin");
                 animator.SetTrigger("spin");
