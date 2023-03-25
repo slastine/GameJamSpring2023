@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private Animator animator;
     private Transform trf;
     private SpriteRenderer sprtrend;
+    float PrevInput;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,33 @@ public class Player : MonoBehaviour
         //transform.Translate(Vector3.right * Time.deltaTime * input * 15);
 
         //update animator
+
+        //if ferret is midair, allow him to jump
+        animator.SetBool("grounded", grounded);
+
+        //if ferret is moving right, alert the animator
+        if (input > 0)
+        {
+            if(!animator.GetBool("isMovingRight"))
+            {
+                animator.ResetTrigger("spin");
+                animator.SetTrigger("spin");
+            }
+            animator.SetBool("isMovingRight", true);
+            sprtrend.flipX = false;
+        }
+        else if (input < 0)
+        {
+            if(animator.GetBool("isMovingRight"))
+            {
+                animator.ResetTrigger("spin");
+                animator.SetTrigger("spin");
+            }
+            animator.SetBool("isMovingRight", false);
+            sprtrend.flipX = true;
+        }
+        
+        //find out when to idle
         if(input == 0)
         {
             animator.SetBool("isMoving", false);
@@ -47,15 +75,7 @@ public class Player : MonoBehaviour
             animator.SetBool("isMoving", true);
         }
 
-        //flip the sprite as needed, it rotates on the y axis.
-        if (Input.GetAxis("Horizontal") > .25)
-        {
-            sprtrend.flipX = false;
-        }
-        if (Input.GetAxis("Horizontal") < -.25)
-        {
-            sprtrend.flipX = true;
-        }
+        PrevInput = input;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
