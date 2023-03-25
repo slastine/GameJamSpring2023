@@ -15,15 +15,15 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float input = Input.GetAxis("Horizontal");
         //
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && grounded)
         {
             rb.AddForce(Vector2.up * thrust, ForceMode2D.Impulse);
         }
-        rb.AddForce(Vector2.right * 1 * input * Time.deltaTime * 200, ForceMode2D.Impulse);
+        transform.Translate(Vector3.right * Time.deltaTime * input * 20);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
