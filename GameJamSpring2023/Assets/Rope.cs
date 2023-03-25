@@ -6,6 +6,7 @@ public class Rope : MonoBehaviour
 {
     GameObject ConnectedNode;
     Rigidbody2D rb;
+    public float ForceMagnitude = 15;
 
     void Start()
     {
@@ -21,7 +22,7 @@ public class Rope : MonoBehaviour
                 ConnectedNode = null;
                 return;
             }
-            rb.AddForce((ConnectedNode.transform.position - transform.position).normalized * 5);
+            rb.AddForce((ConnectedNode.transform.position - transform.position).normalized * ForceMagnitude);
 
         }
     }

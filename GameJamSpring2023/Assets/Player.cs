@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -30,9 +31,11 @@ public class Player : MonoBehaviour
         //Debug.Log(Camera.main.WorldToViewportPoint(this.transform.position));
         float input = Input.GetAxis("Horizontal");
         //
+        if (Input.GetKey(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         if (Input.GetKey(KeyCode.Space) && grounded && Mathf.Abs(rb.velocity.y) <= .01f)
         {
-            FindObjectOfType<audioManager>().Play("hop");
+            FindObjectOfType<audioManager>()?.Play("hop");
             rb.AddForce(Vector2.up * thrust, ForceMode2D.Impulse);
             Debug.Log("Hop");
             
@@ -77,7 +80,7 @@ public class Player : MonoBehaviour
         else
         {
             animator.SetBool("isMoving", true);
-            FindObjectOfType<audioManager>().Play("footstep");
+            FindObjectOfType<audioManager>()?.Play("footstep");
         }
 
         PrevInput = input;
@@ -85,7 +88,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        if(collision.gameObject.CompareTag("Ground"))
         {
             grounded = true;
         }
