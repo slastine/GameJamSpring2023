@@ -10,6 +10,15 @@ public class audioManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        MainMenuUi.MusicVolumeChanged += (v) =>
+            theme.source.volume = v * theme.volume;
+
+        MainMenuUi.SfxVolumeChanged += (v) =>
+        {
+            foreach (var s in sounds) 
+                s.source.volume = v * s.volume;
+        };
+
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
