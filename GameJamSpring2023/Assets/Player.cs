@@ -8,15 +8,18 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public bool grounded;
     public float thrust;
+    public Vector3 startPos;
     // Start is called before the first frame update
     void Start()
     {
         rb = go.GetComponent<Rigidbody2D>();
+        startPos = this.transform.position;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        Debug.Log(Camera.main.WorldToViewportPoint(this.transform.position));
         float input = Input.GetAxis("Horizontal");
         //
         if (Input.GetKey(KeyCode.Space) && grounded && rb.velocity.y == 0)
