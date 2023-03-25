@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,9 +15,13 @@ public class MainMenuUi : MonoBehaviour
     public Slider SfxVolSlider;
     public Slider MusicVolSlider;
 
+    public static event Action<float> MasterVolumeChanged;
+    public static event Action<float> SfxVolumeChanged;
+    public static event Action<float> MusicVolumeChanged;
+
     public void StartGame() => SceneManager.LoadScene(1);
 
-    public void UpdateMasterVol() => MasterVol = MasterVolSlider.value;
-    public void UpdateSfxVol() => SfxVol = SfxVolSlider.value * MasterVol;
-    public void UpdateMusicVol() => MusicVol = MusicVolSlider.value * MasterVol;
+    public void UpdateMasterVol() => MasterVolumeChanged?.Invoke(MasterVol = MasterVolSlider.value);
+    public void UpdateSfxVol() => SfxVolumeChanged?.Invoke(SfxVol = SfxVolSlider.value * MasterVol);
+    public void UpdateMusicVol() => MusicVolumeChanged?.Invoke(MusicVol = MusicVolSlider.value * MasterVol);
 }
