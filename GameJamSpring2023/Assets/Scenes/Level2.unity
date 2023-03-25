@@ -473,6 +473,7 @@ MonoBehaviour:
   maxX: 100
   minY: 0
   maxY: 100
+<<<<<<< Updated upstream
 --- !u!1 &871863961
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +607,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!114 &1074839796 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2473504120443303251, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
@@ -748,6 +751,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.1888778}
   m_EdgeRadius: 0
+<<<<<<< Updated upstream
 --- !u!1 &1376492178
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,6 +867,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &1433839017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1061,6 +1067,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &1564974356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,6 +1432,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &1971749164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1442,7 +1451,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3183360034276204828, guid: 625b41ac368aae4459fbbb90c38b3d78, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< Updated upstream
       value: 2.87
+=======
+      value: -4.0792847
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 3183360034276204828, guid: 625b41ac368aae4459fbbb90c38b3d78, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1749,6 +1762,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< Updated upstream
 --- !u!1 &2109228870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,3 +1914,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+--- !u!1 &2109228870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3566499744011480415, guid: 81d4a1d31438a894ab95122851794c54, type: 3}
+  m_PrefabInstance: {fileID: 1084006750}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes
