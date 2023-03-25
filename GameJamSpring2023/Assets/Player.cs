@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     {
         float input = Input.GetAxis("Horizontal");
         //
-        if (Input.GetKey(KeyCode.Space) && grounded)
+        if (Input.GetKey(KeyCode.Space) && grounded && rb.velocity.y == 0)
         {
             rb.AddForce(Vector2.up * thrust, ForceMode2D.Impulse);
         }
