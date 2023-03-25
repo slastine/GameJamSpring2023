@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
         startPos = this.transform.position;
     }
 
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -35,7 +36,8 @@ public class Player : MonoBehaviour
             Debug.Log("Hop");
         }
 
-        rb.velocity = new Vector2(input * 15, rb.velocity.y);
+        //rb.AddForce(Vector2.right * input * 250);
+        rb.velocity = new Vector2(input * 15, rb.velocity.y);;
         //transform.Translate(Vector3.right * Time.deltaTime * input * 15);
 
         //update animator
@@ -73,6 +75,7 @@ public class Player : MonoBehaviour
         else
         {
             animator.SetBool("isMoving", true);
+            FindObjectOfType<audioManager>().Play("footsteps");
         }
 
         PrevInput = input;
@@ -93,7 +96,6 @@ public class Player : MonoBehaviour
             grounded = false;
         }
     }
-
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ground")

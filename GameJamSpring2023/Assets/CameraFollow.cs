@@ -20,19 +20,19 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         Vector3 viewportPoint = Camera.main.WorldToViewportPoint(player.transform.position);
-        if (viewportPoint.x < .1f)
+        if (viewportPoint.x < .3f)
         {
             cam.transform.Translate(Vector3.right *Time.deltaTime * -15);
         }
-        if (viewportPoint.x > .9f)
+        if (viewportPoint.x > .7f)
         {
             cam.transform.Translate(Vector3.right * Time.deltaTime * 15);
         }
-        if (viewportPoint.y < .2f)
+        if (viewportPoint.y < .3f)
         {
             cam.transform.Translate(Vector3.up * Time.deltaTime * -15);
         }
-        if (viewportPoint.y > .8f)
+        if (viewportPoint.y > .7f)
         {
             cam.transform.Translate(Vector3.up * Time.deltaTime * 15);
         }

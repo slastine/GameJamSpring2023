@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Wall
+  - Node
+  - Rope
   layers:
   - Default
   - TransparentFX
