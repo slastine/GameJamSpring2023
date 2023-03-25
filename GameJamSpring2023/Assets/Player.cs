@@ -32,9 +32,10 @@ public class Player : MonoBehaviour
         //
         if (Input.GetKey(KeyCode.Space) && grounded && Mathf.Abs(rb.velocity.y) <= .01f)
         {
+            FindObjectOfType<audioManager>().Play("hop");
             rb.AddForce(Vector2.up * thrust, ForceMode2D.Impulse);
             Debug.Log("Hop");
-            FindObjectOfType<audioManager>().Play("hop");
+            
         }
 
         //rb.AddForce(Vector2.right * input * 250);
@@ -76,7 +77,7 @@ public class Player : MonoBehaviour
         else
         {
             animator.SetBool("isMoving", true);
-            FindObjectOfType<audioManager>().Play("footsteps");
+            FindObjectOfType<audioManager>().Play("footstep");
         }
 
         PrevInput = input;

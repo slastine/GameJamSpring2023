@@ -6,10 +6,10 @@ public class CameraFollow : MonoBehaviour
 {
     public Camera cam;
     public Player player;
-    public int minX = 0;
-    public int maxX = 100;
-    public int minY = 0;
-    public int maxY = 100;
+    public float minX = 0;
+    public float maxX = 100;
+    public float minY = 0;
+    public float maxY = 100;
     // Start is called before the first frame update
     void Start()
     {

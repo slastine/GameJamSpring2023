@@ -226,71 +226,79 @@ MonoBehaviour:
   maxX: 100
   minY: 0
   maxY: 100
---- !u!1 &380189128
-GameObject:
+--- !u!1001 &494529808
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 380189130}
-  - component: {fileID: 380189129}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &380189129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380189128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ab9b71a132f44c4e8391e1bffed4aa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: footsteps
-    clip: {fileID: 8300000, guid: bcd7a3a4b24c140419b5b9d8daa97555, type: 3}
-    volume: 1
-    pitch: 0
-    source: {fileID: 0}
-  - name: jumps
-    clip: {fileID: 8300000, guid: f30efc0f98d02ca43860bfef31666b93, type: 3}
-    volume: 1
-    pitch: 0
-    source: {fileID: 0}
-  - name: landing
-    clip: {fileID: 8300000, guid: 9b6fba7ac498d1b4f8a27ec927146567, type: 3}
-    volume: 1
-    pitch: 0
-    source: {fileID: 0}
-  - name: connection
-    clip: {fileID: 8300000, guid: dd9defca3ed34e94db2149da40757f81, type: 3}
-    volume: 1
-    pitch: 0
-    source: {fileID: 0}
---- !u!4 &380189130
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380189128}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -9194444338107903362, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -9194444338107903362, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -9194444338107903362, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -9194444338107903362, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1441825390779218303, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: m_Name
+      value: Audio Shenanigans
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291696021385362103, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291696021385362103, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291696021385362103, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291696021385362103, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291696021385362103, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291696021385362103, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291696021385362103, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291696021385362103, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291696021385362103, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291696021385362103, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6291696021385362103, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33a2505748e20d54782950f0caed4627, type: 3}
 --- !u!1 &497617075
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +489,7 @@ Transform:
   m_Children:
   - {fileID: 497617076}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2129314056
 PrefabInstance:
