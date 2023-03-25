@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
         {
             rb.AddForce(Vector2.up * thrust, ForceMode2D.Impulse);
         }
-        transform.Translate(Vector3.right * Time.deltaTime * input * 20);
+        transform.Translate(Vector3.right * Time.deltaTime * input * 15);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

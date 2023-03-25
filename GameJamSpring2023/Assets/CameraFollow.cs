@@ -22,19 +22,19 @@ public class CameraFollow : MonoBehaviour
         Vector3 viewportPoint = Camera.main.WorldToViewportPoint(player.transform.position);
         if (viewportPoint.x < .1f)
         {
-            cam.transform.Translate(Vector3.right *Time.deltaTime * -20);
+            cam.transform.Translate(Vector3.right *Time.deltaTime * -15);
         }
         if (viewportPoint.x > .9f)
         {
-            cam.transform.Translate(Vector3.right * Time.deltaTime * 20);
+            cam.transform.Translate(Vector3.right * Time.deltaTime * 15);
         }
-        if (viewportPoint.y < .1f)
+        if (viewportPoint.y < .2f)
         {
-            cam.transform.Translate(Vector3.up * Time.deltaTime * -20);
+            cam.transform.Translate(Vector3.up * Time.deltaTime * -15);
         }
-        if (viewportPoint.y > .9f)
+        if (viewportPoint.y > .8f)
         {
-            cam.transform.Translate(Vector3.up * Time.deltaTime * 20);
+            cam.transform.Translate(Vector3.up * Time.deltaTime * 15);
         }
     }
 }
