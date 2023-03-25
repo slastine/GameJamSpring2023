@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5684218349393734409}
   - component: {fileID: 5684218349393734410}
   - component: {fileID: 5684218349393734414}
-  - component: {fileID: 8954495565326716930}
-  - component: {fileID: -8263549746838465545}
+  - component: {fileID: 8617301622149174119}
+  - component: {fileID: 140944882919339104}
   m_Layer: 0
   m_Name: Segment
   m_TagString: Untagged
@@ -185,8 +185,8 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
---- !u!232 &8954495565326716930
-DistanceJoint2D:
+--- !u!231 &8617301622149174119
+SpringJoint2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -201,11 +201,12 @@ DistanceJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.5, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 1
+  m_AutoConfigureDistance: 0
   m_Distance: 0.005
-  m_MaxDistanceOnly: 1
---- !u!232 &-8263549746838465545
-DistanceJoint2D:
+  m_DampingRatio: 0
+  m_Frequency: 0
+--- !u!231 &140944882919339104
+SpringJoint2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -220,6 +221,7 @@ DistanceJoint2D:
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.5, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 1
+  m_AutoConfigureDistance: 0
   m_Distance: 0.005
-  m_MaxDistanceOnly: 1
+  m_DampingRatio: 0
+  m_Frequency: 0

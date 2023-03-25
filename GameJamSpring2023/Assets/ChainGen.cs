@@ -12,14 +12,14 @@ public class ChainGen : MonoBehaviour
     void Start()
     {
         HingeJoint2D joint = null;
-        DistanceJoint2D d = null;
+        SpringJoint2D d = null;
 
         for (uint i = 0; i < Count; i++) 
         {
             var c = Instantiate(Chain, transform);
             c.transform.Translate(new Vector2(2f + i * Offset, 0));
             var hinges = c.GetComponents<HingeJoint2D>();
-            var dists = c.GetComponents<DistanceJoint2D>();
+            var dists = c.GetComponents<SpringJoint2D>();
 
             if (i != 0)
             {
