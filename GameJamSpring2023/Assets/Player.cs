@@ -47,6 +47,7 @@ public class Player : MonoBehaviour
         else
         {
             animator.SetBool("isMoving", true);
+            FindObjectOfType<audioManager>().Play("footsteps");
         }
 
         //flip the sprite as needed, it rotates on the y axis.
