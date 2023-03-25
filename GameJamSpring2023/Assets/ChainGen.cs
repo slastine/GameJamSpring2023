@@ -12,9 +12,14 @@ public class ChainGen : MonoBehaviour
 
     void Start()
     {
+        HingeGen();
+    }
+
+    void HingeGen()
+    {
         HingeJoint2D joint = null;
 
-        for (uint i = 0; i < Count; i++) 
+        for (uint i = 0; i < Count; i++)
         {
             var c = Instantiate(Chain, transform);
             c.transform.Translate(new Vector2(2f + i * Offset, 0));
@@ -42,10 +47,30 @@ public class ChainGen : MonoBehaviour
             joint = hinges[1];
         }
     }
-
-    // Update is called once per frame
-    void Update()
+    void RopeGen()
     {
-        
+        RopeJoint j = null;
+
+        for (uint i = 0; i < Count; i++)
+        {
+            var c = Instantiate(Chain, transform);
+            c.transform.Translate(new Vector2(2f + i * Offset, 0));
+            var ropes = c.GetComponents<RopeJoint>();
+
+            if (i != 0)
+            {
+                //ropes[0].Remote = j.gameObject;
+                j.Remote = ropes[0].gameObject;
+            }
+            else
+            {
+                ropes[0].Remote = gameObject;
+            }
+            if (i == Count - 1)
+            {
+                ropes[1].Remote = Player;
+            }
+            j = ropes[1];
+        }
     }
 }
