@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class UiManager : MonoBehaviour
+public class MainMenuUi : MonoBehaviour
 {
     public static float MasterVol = 1f;
     public static float SfxVol = 1f;

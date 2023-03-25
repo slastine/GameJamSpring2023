@@ -14,6 +14,7 @@ public class ChainGen : MonoBehaviour
 
     void Start()
     {
+        Player ??= GameObject.Find("Player");
         HingeGen();
     }
 
