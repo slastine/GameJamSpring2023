@@ -22,6 +22,14 @@ public class Player : MonoBehaviour
         startPos = this.transform.position;
     }
 
+    private void Update()
+    {
+        if (rb.gravityScale == 0 && !Input.GetKey(KeyCode.Space))
+        {
+            rb.gravityScale = 35;
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -65,6 +73,15 @@ public class Player : MonoBehaviour
         {
             grounded = true;
         }
+        if (collision.gameObject.tag == "Wall")
+        {
+            rb.velocity = new Vector2(rb.velocity.x, .01f);
+            if (Input.GetKey(KeyCode.Space))
+            {
+                rb.gravityScale = 0;
+                StartCoroutine("Wait");
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -74,7 +91,11 @@ public class Player : MonoBehaviour
             grounded = false;
         }
     }
-
+    IEnumerator Wait()
+    {
+        yield return new WaitForSecondsRealtime(.1f);
+        rb.gravityScale = 35;
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ground")
