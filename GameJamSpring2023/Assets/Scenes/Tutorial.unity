@@ -180,6 +180,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8216361336437840165, guid: 31a5a57e0d33f914e9cc7e8bdab3c812, type: 3}
+      propertyPath: F.x
+      value: -80
+      objectReference: {fileID: 0}
     - target: {fileID: 8216361336437840166, guid: 31a5a57e0d33f914e9cc7e8bdab3c812, type: 3}
       propertyPath: Count
       value: 75

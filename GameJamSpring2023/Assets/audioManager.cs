@@ -5,6 +5,8 @@ using UnityEngine;
 public class audioManager : MonoBehaviour
 {
     public Sound[] sounds;
+    public Sound theme;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -16,17 +18,24 @@ public class audioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
         }
-
     }
 
     void Start ()
     {
-        //Play("theme");
+        theme.source = gameObject.AddComponent<AudioSource>();
+        theme.source.clip = theme.clip;
+
+        theme.source.volume = theme.volume * MainMenuUi.MusicVol;
+        theme.source.pitch = theme.pitch;
+        theme.source.loop = true;
+
+        theme.source.Play();
     }
 
     public void Play (String name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.volume = s.volume * MainMenuUi.SfxVol;
         s.source.Play();
     }
 }
