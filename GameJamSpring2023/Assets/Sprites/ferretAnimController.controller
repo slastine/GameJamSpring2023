@@ -56,7 +56,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: isMoving
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6094200458327704534}
   m_Solo: 0
@@ -79,7 +82,19 @@ AnimatorController:
   m_PrefabAsset: {fileID: 0}
   m_Name: ferretAnimController
   serializedVersion: 5
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: isMoving
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: isKeyPressed
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -104,13 +119,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 7193774321436268174}
-    m_Position: {x: 313.2, y: 118, z: 0}
+    m_Position: {x: 310, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6094200458327704534}
     m_Position: {x: 440, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7188753844509310803}
-    m_Position: {x: 560, y: 120, z: 0}
+    m_Position: {x: 550, y: 120, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -128,7 +143,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isMoving
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7193774321436268174}
   m_Solo: 0

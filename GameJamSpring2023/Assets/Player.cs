@@ -9,10 +9,16 @@ public class Player : MonoBehaviour
     public bool grounded;
     public float thrust;
     public Vector3 startPos;
+    private Animator animator;
+    private Transform trf;
+    private SpriteRenderer sprtrend;
     // Start is called before the first frame update
     void Start()
     {
         rb = go.GetComponent<Rigidbody2D>();
+        animator = go.GetComponent<Animator>();
+        trf = go.GetComponent<Transform>();
+        sprtrend = go.GetComponent<SpriteRenderer>();
         startPos = this.transform.position;
     }
 
@@ -27,6 +33,26 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector2.up * thrust, ForceMode2D.Impulse);
         }
         transform.Translate(Vector3.right * Time.deltaTime * input * 15);
+
+        //update animator
+        if(input == 0)
+        {
+            animator.SetBool("isMoving", false);
+        }
+        else
+        {
+            animator.SetBool("isMoving", true);
+        }
+
+        //flip the sprite as needed, it rotates on the y axis.
+        if (Input.GetAxis("Horizontal") > .25)
+        {
+            sprtrend.flipX = false;
+        }
+        if (Input.GetAxis("Horizontal") < -.25)
+        {
+            sprtrend.flipX = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
