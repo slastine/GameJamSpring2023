@@ -10,6 +10,8 @@ public class ChainGen : MonoBehaviour
     public GameObject Player;
     public float MaxDist = 16f;
 
+    public List<RopeJoint> Rope = new();
+
     void Start()
     {
         HingeGen();
@@ -57,10 +59,13 @@ public class ChainGen : MonoBehaviour
             c.transform.Translate(new Vector2(2f + i * Offset, 0));
             var ropes = c.GetComponents<RopeJoint>();
 
+            foreach (var v in c.GetComponents<HingeJoint2D>()) v.enabled = false;
+            Rope.AddRange(ropes);
+
             if (i != 0)
             {
-                //ropes[0].Remote = j.gameObject;
-                j.Remote = ropes[0].gameObject;
+                ropes[0].Remote = j.gameObject;
+                //j.Remote = ropes[0].gameObject;
             }
             else
             {
@@ -72,5 +77,10 @@ public class ChainGen : MonoBehaviour
             }
             j = ropes[1];
         }
+    }
+
+    private void FixedUpdate()
+    {
+        foreach (RopeJoint r in Rope) r.UpdateSegment();
     }
 }

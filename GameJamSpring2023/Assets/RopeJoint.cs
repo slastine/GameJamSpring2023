@@ -13,7 +13,7 @@ public class RopeJoint : MonoBehaviour
         
     }
 
-    void Update()
+    public void UpdateSegment()
     {
         if (Remote != null)
         {

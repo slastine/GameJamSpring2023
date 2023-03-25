@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface IOnNodeActivate
 {
-    public void OnActivate();
+    public void OnConnect();
+    public void OnDisconnect();
 }

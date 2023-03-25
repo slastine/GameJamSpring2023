@@ -23,25 +23,25 @@ public class MovingDoor : MonoBehaviour, IOnNodeActivate
 
     IEnumerator Raise()
     {
-
+        yield return Wait();
+        door.transform.position = startPos;
         while (Vector2.Distance((Vector2)door.transform.position, endPos) > .1f)
         {
             door.transform.position = Vector2.MoveTowards(door.transform.position, endPos, moveSpeedup);
             Debug.Log("Moving up");
             yield return null;
         }
-            StartCoroutine("Wait");
     }
 
     IEnumerator Wait()
     {
         yield return new WaitForSecondsRealtime(waitTime);
-
-        StartCoroutine("Close");
     }
 
     IEnumerator Close()
     {
+        yield return Wait();
+        door.transform.position = endPos;
         while (Vector2.Distance((Vector2)door.transform.position, startPos) > .1f)
         {
             door.transform.position = Vector2.MoveTowards(door.transform.position, startPos, moveSpeedDown);
@@ -54,8 +54,15 @@ public class MovingDoor : MonoBehaviour, IOnNodeActivate
         }
     }
 
-    public void OnActivate()
+    public void OnConnect()
     {
-        StartCoroutine("Raise");
+        StopAllCoroutines();
+        StartCoroutine(Raise());
+    }
+
+    public void OnDisconnect()
+    {
+        StopAllCoroutines();
+        StartCoroutine(Close());
     }
 }

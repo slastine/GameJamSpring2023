@@ -14,27 +14,42 @@ public class Node : MonoBehaviour
             toActivate.Add((IOnNodeActivate)activated[i].GetComponent(typeof(IOnNodeActivate)));
         }
     }
+
     public void Activate()
     {
-        for(int i = 0; i < toActivate.Count; i++)
+        for (int i = 0; i < toActivate.Count; i++)
         {
-            toActivate[i].OnActivate();
+            toActivate[i].OnConnect();
         }
+    }
+
+    public void Deactivate()
+    {
+        for (int i = 0; i < toActivate.Count; i++)
+            toActivate[i].OnDisconnect();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Rope"))
-        {
             Activate();
-        }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Rope"))
-        {
             Activate();
-        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Rope"))
+            Deactivate();
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Rope"))
+            Deactivate();
     }
 }

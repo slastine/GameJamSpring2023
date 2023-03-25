@@ -103,7 +103,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.01
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -127,7 +127,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.5, y: 0}
-  m_ConnectedAnchor: {x: -0.5, y: 0}
+  m_ConnectedAnchor: {x: -1, y: 0}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -151,7 +151,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.5, y: 0}
-  m_ConnectedAnchor: {x: 0.5, y: 0}
+  m_ConnectedAnchor: {x: 1, y: 0}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -215,6 +215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f11531d0063dd48b5214ebf2d6f8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pin: {x: 0, y: 0}
-  RemotePin: {x: 0, y: 0}
+  Pin: {x: 0.5, y: 0}
+  RemotePin: {x: -0.5, y: 0}
   Remote: {fileID: 0}
