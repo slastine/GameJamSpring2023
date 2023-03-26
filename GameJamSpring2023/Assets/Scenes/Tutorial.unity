@@ -134,9 +134,10 @@ GameObject:
   - component: {fileID: 30635930}
   - component: {fileID: 30635929}
   - component: {fileID: 30635928}
+  - component: {fileID: 30635931}
   m_Layer: 0
   m_Name: watertile-Sheet_0 (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,6 +230,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &30635931
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30635927}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
 --- !u!1 &40364713
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7148559639710881529, guid: 7e472cb6ba819914080c1f26fb35e540, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7148559639710881529, guid: 7e472cb6ba819914080c1f26fb35e540, type: 3}
       propertyPath: m_LocalPosition.x
@@ -440,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8216361336437840169, guid: 31a5a57e0d33f914e9cc7e8bdab3c812, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8216361336437840169, guid: 31a5a57e0d33f914e9cc7e8bdab3c812, type: 3}
       propertyPath: m_LocalPosition.x
@@ -686,9 +713,10 @@ GameObject:
   - component: {fileID: 841495339}
   - component: {fileID: 841495338}
   - component: {fileID: 841495337}
+  - component: {fileID: 841495340}
   m_Layer: 0
   m_Name: watertile-Sheet_0 (2)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -781,6 +809,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &841495340
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841495336}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
 --- !u!1001 &888609355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -794,7 +848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4961845425566322711, guid: 5f67cbc398ec4ac4bbc1ef0fe03bfd48, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4961845425566322711, guid: 5f67cbc398ec4ac4bbc1ef0fe03bfd48, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14173,7 +14227,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4964962679933073279, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4964962679933073279, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14232,9 +14286,10 @@ GameObject:
   - component: {fileID: 1472144199}
   - component: {fileID: 1472144198}
   - component: {fileID: 1472144197}
+  - component: {fileID: 1472144200}
   m_Layer: 0
   m_Name: watertile-Sheet_0 (3)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14327,6 +14382,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1472144200
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472144196}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
 --- !u!1001 &1514930782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14336,7 +14417,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4964962679933073279, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4964962679933073279, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14416,7 +14497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6291696021385362103, guid: 33a2505748e20d54782950f0caed4627, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6291696021385362103, guid: 33a2505748e20d54782950f0caed4627, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14542,7 +14623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2473504120443303253, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2473504120443303253, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14602,9 +14683,10 @@ GameObject:
   - component: {fileID: 2134796789}
   - component: {fileID: 2134796788}
   - component: {fileID: 2134796787}
+  - component: {fileID: 2134796790}
   m_Layer: 0
   m_Name: watertile-Sheet_0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14697,6 +14779,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2134796790
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134796786}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
 --- !u!1001 &3566499743933484635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14706,11 +14814,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3566499744011480412, guid: 81d4a1d31438a894ab95122851794c54, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3566499744011480412, guid: 81d4a1d31438a894ab95122851794c54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.66
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 3566499744011480412, guid: 81d4a1d31438a894ab95122851794c54, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14771,7 +14879,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5142434783267608496, guid: 79d862b2dd7e22243819cbff606e4059, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5142434783267608496, guid: 79d862b2dd7e22243819cbff606e4059, type: 3}
       propertyPath: m_LocalPosition.x
