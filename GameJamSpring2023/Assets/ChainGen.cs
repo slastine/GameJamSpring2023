@@ -28,6 +28,8 @@ public class ChainGen : MonoBehaviour
             c.transform.Translate(new Vector2(2f + i * Offset, 0));
             var hinges = c.GetComponents<HingeJoint2D>();
             Physics2D.IgnoreCollision(c.GetComponent<Collider2D>(), Player.GetComponent<Collider2D>());
+            Physics2D.IgnoreCollision(c.GetComponent<Collider2D>(), Player.transform.GetChild(0).GetComponent<Collider2D>());
+
             if (i != 0)
             {
                 hinges[0].connectedBody = joint.GetComponent<Rigidbody2D>();

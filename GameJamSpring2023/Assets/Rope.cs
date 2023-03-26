@@ -15,7 +15,7 @@ public class Rope : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (ConnectedNode is not null)
+        if (ConnectedNode != null)
         {
             if ((ConnectedNode.transform.position - transform.position).magnitude > 2f)
             {
