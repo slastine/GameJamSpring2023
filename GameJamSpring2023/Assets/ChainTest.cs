@@ -50,7 +50,7 @@ public class ChainTest : MonoBehaviour
         {
             GameObject go = Instantiate(rope);
             gos[^1].GetComponents<HingeJoint2D>()[0].enabled = true;
-            go.transform.position = gos[^1].transform.TransformPoint(gos[^1].GetComponents<HingeJoint2D>()[0].anchor + go.GetComponent<HingeJoint2D>().anchor);
+            go.transform.position = (Vector2)gos[^1].transform.TransformPoint(gos[^1].GetComponents<HingeJoint2D>()[0].anchor) + go.GetComponent<HingeJoint2D>().anchor;
             go.GetComponents<HingeJoint2D>()[1].connectedBody = gos[^1].GetComponent<Rigidbody2D>();
             gos.Add(go);
             
