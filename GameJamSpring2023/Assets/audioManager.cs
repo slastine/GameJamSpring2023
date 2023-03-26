@@ -9,13 +9,15 @@ public class audioManager : MonoBehaviour
 
     void Awake()
     {
-        /*MainMenuUi.MusicVolumeChanged += (v) =>
+        MainMenuUi.MusicVolumeChanged += (v) =>
+        {
             theme.source.volume = v * theme.volume;
+        };
         MainMenuUi.SfxVolumeChanged += (v) =>
         {
-            foreach (var s in sounds) 
+            foreach (var s in sounds)
                 s.source.volume = v * s.volume;
-        };*/
+        };
 
         foreach (Sound s in sounds)
         {
