@@ -12,6 +12,7 @@ public class MovingDoor : MonoBehaviour, IOnNodeActivate
     public float moveSpeedDown = .001f;
     public float moveSpeedup = .1f;
     public bool continous;
+    public bool raising = false;
 
     public void Start()
     {
@@ -23,14 +24,16 @@ public class MovingDoor : MonoBehaviour, IOnNodeActivate
 
     IEnumerator Raise()
     {
-        yield return Wait();
         door.transform.position = startPos;
         while (Vector2.Distance((Vector2)door.transform.position, endPos) > .1f)
         {
             door.transform.position = Vector2.MoveTowards(door.transform.position, endPos, moveSpeedup);
             Debug.Log("Moving up");
+            raising = true;
             yield return null;
         }
+        raising = false;
+        StartCoroutine("Wait");
     }
 
     IEnumerator Wait()
@@ -56,13 +59,15 @@ public class MovingDoor : MonoBehaviour, IOnNodeActivate
 
     public void OnConnect()
     {
-        StopAllCoroutines();
-        StartCoroutine(Raise());
+        if(!raising)
+        {
+            StartCoroutine(Raise());
+        }
+        continous = true;
     }
 
     public void OnDisconnect()
     {
-        StopAllCoroutines();
-        StartCoroutine(Close());
+        continous = false;
     }
 }

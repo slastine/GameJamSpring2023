@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        float speed = PlayerPrefs.GetFloat("Speed");
         float input = Input.GetAxis("Horizontal");
 
         if (Input.GetKey(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -35,7 +36,7 @@ public class Player : MonoBehaviour
             Debug.Log("Hop");
         }
 
-        rb.velocity = new Vector2(input * 15, rb.velocity.y);;
+        rb.velocity = new Vector2(input * speed, rb.velocity.y);;
 
         //update animator
 

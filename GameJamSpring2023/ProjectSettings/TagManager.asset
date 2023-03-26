@@ -8,14 +8,15 @@ TagManager:
   - Wall
   - Node
   - Rope
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Rope
   - Water
   - UI
-  - 
+  - Door
   - 
   - 
   - 
