@@ -20,6 +20,16 @@ public class Player : MonoBehaviour
         trf = go.GetComponent<Transform>();
         sprtrend = go.GetComponent<SpriteRenderer>();
         startPos = transform.position;
+        InitPrefs();
+    }
+
+    void InitPrefs()
+    {
+        if (!PlayerPrefs.HasKey("Color")) PlayerPrefs.SetInt("Color", 0);
+        if (!PlayerPrefs.HasKey("Speed")) PlayerPrefs.SetFloat("Speed", 15f);
+        if (!PlayerPrefs.HasKey("MasterVol")) PlayerPrefs.SetFloat("MasterVol", 1);
+        if (!PlayerPrefs.HasKey("SfxVol"))  PlayerPrefs.SetFloat("SfxVol", 1);
+        if (!PlayerPrefs.HasKey("MusicVol"))  PlayerPrefs.SetFloat("MusicVol", 1);
     }
 
     void FixedUpdate()

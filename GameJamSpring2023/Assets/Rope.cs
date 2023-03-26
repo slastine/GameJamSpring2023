@@ -37,11 +37,7 @@ public class Rope : MonoBehaviour
         if (collision.collider.CompareTag("Enemy"))
         {
             Debug.Log("Game over");
-<<<<<<< Updated upstream
             SceneManager.LoadScene(5);
-=======
-            void StartGame() => SceneManager.LoadScene(5);
->>>>>>> Stashed changes
         }
     }
 }
