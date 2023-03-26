@@ -51,22 +51,18 @@ public class ChainTest : MonoBehaviour
         for(int i = 0; i < num - count; i++)
         {
             GameObject go = Instantiate(rope);
-            gos[gos.Count -1].GetComponents<HingeJoint2D>()[0].enabled = true;
-            go.transform.position = gos[gos.Count - 1].transform.TransformPoint(gos[gos.Count - 1].GetComponents<HingeJoint2D>()[0].anchor);
-            go.GetComponents<HingeJoint2D>()[1].connectedBody = gos[gos.Count - 1].GetComponent<Rigidbody2D>();
+            gos[^1].GetComponents<HingeJoint2D>()[0].enabled = true;
+            go.transform.position = gos[^1].transform.TransformPoint(gos[^1].GetComponents<HingeJoint2D>()[0].anchor);
+            go.GetComponents<HingeJoint2D>()[1].connectedBody = gos[^1].GetComponent<Rigidbody2D>();
             gos.Add(go);
             
-            gos[gos.Count - 2].GetComponents<HingeJoint2D>()[0].connectedBody = gos[gos.Count - 1].GetComponent<Rigidbody2D>();
-            gos[gos.Count - 1].GetComponents<HingeJoint2D>()[0].enabled = false;
+            gos[^2].GetComponents<HingeJoint2D>()[0].connectedBody = gos[^1].GetComponent<Rigidbody2D>();
+            gos[^1].GetComponents<HingeJoint2D>()[0].enabled = false;
             
             if (i == 0)
-            {
-                Destroy(go.GetComponent<DistanceJoint2D>());
-            }
+                Destroy(gos[^2].GetComponent<DistanceJoint2D>());
             if (i == num - count - 1)
-            {
                 AddDistanceJoint(go);
-            }
         }
         count = num;
     }
@@ -119,10 +115,10 @@ static int gcd(int a, int b)
     void AddDistanceJoint(GameObject o)
     {
         var j = o.AddComponent<DistanceJoint2D>();
-        j.maxDistanceOnly = true;
-        j.distance = .5f;
+        j.distance = 0;
         j.autoConfigureDistance = false;
-        j.anchor = new Vector2();
+        j.autoConfigureConnectedAnchor = false;
+        j.anchor = Vector2.zero;
         j.connectedAnchor = transform.position;
     }
 }
