@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1801100058414232101}
   - component: {fileID: 1108428638253410241}
   - component: {fileID: 7550995428068545690}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Node 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   on: 0
-  tether: {fileID: 0}
   ren: {fileID: 4964962679933073278}
   active: {fileID: 21300000, guid: 71c5649f5313aff45b007269b8f7bb14, type: 3}
   inactive: {fileID: 21300000, guid: 832a53af412a2c24fab9f176f0f69f56, type: 3}
@@ -146,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7550995427893956032}
   - component: {fileID: 7550995427893956033}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: electronodeactivelight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7550995428441517590}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
