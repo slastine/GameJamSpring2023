@@ -6,6 +6,7 @@ public class Node : MonoBehaviour
 {
     public GameObject[] activated;
     public List<IOnNodeActivate> toActivate = new List<IOnNodeActivate>();
+    public Gizmo gizmo;
 
     public void Start()
     {
