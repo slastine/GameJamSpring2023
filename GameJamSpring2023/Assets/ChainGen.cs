@@ -9,7 +9,13 @@ public class ChainGen : MonoBehaviour
     public uint Count = 5;
     public GameObject Player;
     public float MaxDist = 16f;
-    public Color[] colors;
+    public static Color32[] colors = new Color32[]
+    {
+        new Color32(31, 63, 224, 255),
+        new Color32(248, 11, 11, 255),
+        new Color32(15, 132, 0, 255),
+        new Color32(245, 255, 0, 255)
+    };
 
     public List<RopeJoint> Rope = new List<RopeJoint>();
 

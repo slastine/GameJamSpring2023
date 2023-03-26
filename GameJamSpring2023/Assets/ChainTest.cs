@@ -39,6 +39,8 @@ public class ChainTest : MonoBehaviour
             {
                 gos[i].GetComponents<HingeJoint2D>()[1].connectedBody = gos[i - 1].GetComponent<Rigidbody2D>();
                 gos[i].GetComponents<HingeJoint2D>()[0].enabled = false;
+
+                AddDistanceJoint(gos[i]);
             }
         }
     }
@@ -48,7 +50,7 @@ public class ChainTest : MonoBehaviour
         if (num > count) Debug.Log("We need more points " + num);
         for(int i = 0; i < num - count; i++)
         {
-           GameObject go = Instantiate(rope);
+            GameObject go = Instantiate(rope);
             gos[gos.Count -1].GetComponents<HingeJoint2D>()[0].enabled = true;
             go.transform.position = gos[gos.Count - 1].transform.TransformPoint(gos[gos.Count - 1].GetComponents<HingeJoint2D>()[0].anchor);
             go.GetComponents<HingeJoint2D>()[1].connectedBody = gos[gos.Count - 1].GetComponent<Rigidbody2D>();
@@ -57,11 +59,17 @@ public class ChainTest : MonoBehaviour
             gos[gos.Count - 2].GetComponents<HingeJoint2D>()[0].connectedBody = gos[gos.Count - 1].GetComponent<Rigidbody2D>();
             gos[gos.Count - 1].GetComponents<HingeJoint2D>()[0].enabled = false;
             
-            
+            if (i == 0)
+            {
+                Destroy(go.GetComponent<DistanceJoint2D>());
+            }
+            if (i == num - count - 1)
+            {
+                AddDistanceJoint(go);
+            }
         }
         count = num;
     }
-
 
     public List<Vector2> getPoints(Vector2 pointA, Vector2 pointB, int num)
     {
@@ -108,5 +116,13 @@ static int gcd(int a, int b)
         return gcd((int)Mathf.Abs(p.x - q.x), (int)Mathf.Abs(p.y - q.y)) - 1;
     }
 
+    void AddDistanceJoint(GameObject o)
+    {
+        var j = o.AddComponent<DistanceJoint2D>();
+        j.maxDistanceOnly = true;
+        j.distance = .5f;
+        j.autoConfigureDistance = false;
+        j.anchor = new Vector2();
+        j.connectedAnchor = transform.position;
+    }
 }
-
