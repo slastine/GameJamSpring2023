@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,9 @@ MonoBehaviour:
   endPos: {x: 2.7, y: 1.21}
   door: {fileID: 3566499744011480415}
   waitTime: 1
-  moveSpeed: 0.001
+  moveSpeedDown: 0.001
+  moveSpeedup: 0.1
+  continous: 0
 --- !u!50 &3566499744011480403
 Rigidbody2D:
   serializedVersion: 4
