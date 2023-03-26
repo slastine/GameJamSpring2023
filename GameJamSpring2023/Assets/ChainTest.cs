@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class ChainTest : MonoBehaviour
 {
@@ -52,7 +50,7 @@ public class ChainTest : MonoBehaviour
         {
             GameObject go = Instantiate(rope);
             gos[^1].GetComponents<HingeJoint2D>()[0].enabled = true;
-            go.transform.position = gos[^1].transform.TransformPoint(gos[^1].GetComponents<HingeJoint2D>()[0].anchor);
+            go.transform.position = gos[^1].transform.TransformPoint(gos[^1].GetComponents<HingeJoint2D>()[0].anchor + go.GetComponent<HingeJoint2D>().anchor);
             go.GetComponents<HingeJoint2D>()[1].connectedBody = gos[^1].GetComponent<Rigidbody2D>();
             gos.Add(go);
             
@@ -97,6 +95,7 @@ static int gcd(int a, int b)
     // two given points.
     static int getCount(Vector2 p, Vector2 q)
     {
+        return (int)Vector2.Distance(p, q);
         // If line joining p and q is parallel to
         // x axis, then count is difference of y
         // values
@@ -115,9 +114,10 @@ static int gcd(int a, int b)
     void AddDistanceJoint(GameObject o)
     {
         var j = o.AddComponent<DistanceJoint2D>();
-        j.distance = 0;
         j.autoConfigureDistance = false;
         j.autoConfigureConnectedAnchor = false;
+        j.maxDistanceOnly = true;
+        j.distance = 2.5f;
         j.anchor = Vector2.zero;
         j.connectedAnchor = transform.position;
     }
