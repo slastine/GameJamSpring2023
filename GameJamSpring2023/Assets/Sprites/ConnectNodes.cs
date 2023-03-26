@@ -7,6 +7,11 @@ public class ConnectNodes : MonoBehaviour
     public GameObject player;
     public List<Node> connectedNodes = new List<Node>();
     public int nodesInScene;
+
+    private void Start()
+    {
+        player.GetComponent<Player>().connectedTo = connectedNodes[0];
+    }
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.E))
@@ -21,11 +26,19 @@ public class ConnectNodes : MonoBehaviour
                     {
                         connectedNodes.Remove(node);
                         node.gizmo.Activate();
+                        node.Deactivate();
                     }
                     else
                     {
                         connectedNodes.Add(node);
                         node.gizmo.Activate();
+                        node.Activate();
+                        ChainTest connect = player.GetComponent<Player>().connectedTo.gameObject.GetComponent<ChainTest>();
+                        connect.AddDistanceJoint(connect.gos[0], node.gameObject.GetComponent<Rigidbody2D>());
+                        connect.gos[0].GetComponents<HingeJoint2D>()[1].connectedBody = node.GetComponent<Rigidbody2D>();
+                        connect.player = this.gameObject;
+                        node.gameObject.AddComponent<ChainTest>().player = this.player;
+                        node.gameObject.GetComponent<ChainTest>().rope = connect.rope;
                     }
                 }
 
