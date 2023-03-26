@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 43516578735149708}
   - component: {fileID: 43516578735149707}
   - component: {fileID: 1813392332}
+  - component: {fileID: 2061033249}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -187,8 +188,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go: {fileID: 2473504120443303250}
   rb: {fileID: 0}
-  thrust: 250
+  thrust: 300
   startPos: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
 --- !u!50 &2473504120443303240
 Rigidbody2D:
   serializedVersion: 4
@@ -343,3 +345,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.6, y: 0.26}
   m_Direction: 1
+--- !u!114 &2061033249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2473504120443303250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b3228986776c04da6d20b5ade6a217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2473504120443303250}
+  connectedNodes: []
+  nodesInScene: 0

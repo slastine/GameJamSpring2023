@@ -13,6 +13,14 @@ public class Gizmo : MonoBehaviour
 
     public void Start()
     {
+        if (on)
+        {
+            ren.sprite = active;
+        }
+        else
+        {
+            ren.sprite = inactive;
+        }
         lowerLayer.color = ChainGen.colors[PlayerPrefs.GetInt("Color")];
     }
 
