@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -43,7 +42,6 @@ public class ConnectNodes : MonoBehaviour
                         player.GetComponent<Player>().connectedTo = node;
                     }
                 }
-
             }
         }
     }

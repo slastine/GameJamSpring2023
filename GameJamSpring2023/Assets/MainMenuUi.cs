@@ -19,7 +19,7 @@ public class MainMenuUi : MonoBehaviour
     public static event Action<float> MusicVolumeChanged;
     public static event Action<float> SpeedChanged;
 
-    public void StartGame() => SceneManager.LoadScene(1);
+    public void StartGame() => SceneManager.LoadScene(2);
 
     private void Awake()
     {
@@ -66,6 +66,7 @@ public class MainMenuUi : MonoBehaviour
     public void UpdateSpeed()
     {
         PlayerPrefs.SetFloat("Speed", SpeedSlider.value);
+        GameObject.Find("Audio Shenanigans").GetComponent<audioManager>().theme.source.pitch = 1 + (SpeedSlider.value / SpeedSlider.maxValue - .5f) * 2;
     }
 
     public void UpdateColor(int c)

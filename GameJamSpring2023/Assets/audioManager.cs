@@ -1,4 +1,3 @@
-using UnityEngine.Audio;
 using System;
 using UnityEngine;
 
@@ -9,6 +8,10 @@ public class audioManager : MonoBehaviour
 
     void Awake()
     {
+        PlayerPrefs.SetFloat("MasterVol", .5f);
+        PlayerPrefs.SetFloat("SfxVol", .5f);
+        PlayerPrefs.SetFloat("MusicVol", .5f);
+
         MainMenuUi.MusicVolumeChanged += (v) =>
         {
             theme.source.volume = v * theme.volume;
@@ -38,6 +41,7 @@ public class audioManager : MonoBehaviour
         theme.source.Play();
         float v = PlayerPrefs.GetFloat("SfxVol");
         Debug.Log(v);
+
         foreach (var s in sounds)
             s.source.volume = v * s.volume;
         float m = PlayerPrefs.GetFloat("MusicVol");
