@@ -219,21 +219,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2061033249, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
+      propertyPath: nodesInScene
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2473504120443303250, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2473504120443303253, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2473504120443303253, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.326654
+      value: -10.27
       objectReference: {fileID: 0}
     - target: {fileID: 2473504120443303253, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.2163863
+      value: -4.59
       objectReference: {fileID: 0}
     - target: {fileID: 2473504120443303253, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -278,15 +282,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4964962679933073279, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4964962679933073279, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.720211
+      value: -12.34
       objectReference: {fileID: 0}
     - target: {fileID: 4964962679933073279, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.044896
+      value: -3.79
       objectReference: {fileID: 0}
     - target: {fileID: 4964962679933073279, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -323,6 +327,10 @@ PrefabInstance:
     - target: {fileID: 4964962679933073281, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
       propertyPath: m_Name
       value: Node 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7550995428068545690, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
+      propertyPath: on
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ef28761e27b3424189fdca00532164f, type: 3}

@@ -6,6 +6,7 @@ public class ConnectNodes : MonoBehaviour
 {
     public GameObject player;
     public List<Node> connectedNodes = new List<Node>();
+    public int nodesInScene;
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.E))
@@ -30,5 +31,10 @@ public class ConnectNodes : MonoBehaviour
 
             }
         }
+    }
+
+    public bool canWin()
+    {
+        return connectedNodes.Count >= nodesInScene;
     }
 }
