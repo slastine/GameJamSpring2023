@@ -4063,6 +4063,10 @@ PrefabInstance:
       propertyPath: sounds.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: -9194444338107903362, guid: 33a2505748e20d54782950f0caed4627, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1441825390779218303, guid: 33a2505748e20d54782950f0caed4627, type: 3}
       propertyPath: m_Name
       value: Audio Shenanigans
