@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 966768583}
   - component: {fileID: 1988760130}
   - component: {fileID: 1988760129}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,6 +191,7 @@ MonoBehaviour:
   thrust: 300
   startPos: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
+  connectedTo: {fileID: 0}
 --- !u!50 &2473504120443303240
 Rigidbody2D:
   serializedVersion: 4
