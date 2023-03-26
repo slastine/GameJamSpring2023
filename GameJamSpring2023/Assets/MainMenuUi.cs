@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -26,6 +24,9 @@ public class MainMenuUi : MonoBehaviour
     private void Awake()
     {
         MasterVol = MasterVolSlider.value;
+        SfxVol = SfxVolSlider.value;
+        MusicVol = MusicVolSlider.value;
+
         PlayerPrefs.SetFloat("MasterVol", MasterVolSlider.value);
         PlayerPrefs.SetFloat("SfxVol", SfxVolSlider.value * MasterVol);
         PlayerPrefs.SetFloat("MusicVol", MusicVolSlider.value * MasterVol);
@@ -38,6 +39,7 @@ public class MainMenuUi : MonoBehaviour
         MasterVol = MasterVolSlider.value;
         SfxVol = SfxVolSlider.value * MasterVol;
         MusicVol = MusicVolSlider.value * MasterVol;
+
         PlayerPrefs.SetFloat("MasterVol", MasterVolSlider.value);
         PlayerPrefs.SetFloat("SfxVol", SfxVolSlider.value * MasterVol);
         PlayerPrefs.SetFloat("MusicVol", MusicVolSlider.value * MasterVol);
@@ -46,18 +48,21 @@ public class MainMenuUi : MonoBehaviour
         SfxVolumeChanged?.Invoke(SfxVol);
         MusicVolumeChanged?.Invoke(MusicVol);
     }
+
     public void UpdateSfxVol()
     {
         SfxVol = SfxVolSlider.value * MasterVol;
         PlayerPrefs.SetFloat("SfxVol", SfxVolSlider.value * MasterVol);
         SfxVolumeChanged?.Invoke(SfxVol);
     }
+
     public void UpdateMusicVol() 
     {
         MusicVol = MusicVolSlider.value * MasterVol;
         PlayerPrefs.SetFloat("MusicVol", MusicVolSlider.value * MasterVol);
         MusicVolumeChanged?.Invoke(MusicVol);
     }
+
     public void UpdateSpeed()
     {
         PlayerPrefs.SetFloat("Speed", SpeedSlider.value);

@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 30635929}
   - component: {fileID: 30635928}
   - component: {fileID: 30635931}
+  - component: {fileID: 30635933}
+  - component: {fileID: 30635932}
   m_Layer: 0
   m_Name: watertile-Sheet_0 (1)
   m_TagString: Enemy
@@ -256,6 +258,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &30635932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30635927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549c4e25ed40dba49b80bae5aff1ed4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &30635933
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30635927}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &40364713
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +689,8 @@ GameObject:
   - component: {fileID: 841495338}
   - component: {fileID: 841495337}
   - component: {fileID: 841495340}
+  - component: {fileID: 841495342}
+  - component: {fileID: 841495341}
   m_Layer: 0
   m_Name: watertile-Sheet_0 (2)
   m_TagString: Enemy
@@ -775,6 +812,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &841495341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841495336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549c4e25ed40dba49b80bae5aff1ed4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &841495342
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841495336}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &888609355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14227,6 +14297,8 @@ GameObject:
   - component: {fileID: 1472144198}
   - component: {fileID: 1472144197}
   - component: {fileID: 1472144200}
+  - component: {fileID: 1472144202}
+  - component: {fileID: 1472144201}
   m_Layer: 0
   m_Name: watertile-Sheet_0 (3)
   m_TagString: Enemy
@@ -14348,6 +14420,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &1472144201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472144196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549c4e25ed40dba49b80bae5aff1ed4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &1472144202
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472144196}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1514930782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14651,6 +14756,8 @@ GameObject:
   - component: {fileID: 2134796788}
   - component: {fileID: 2134796787}
   - component: {fileID: 2134796790}
+  - component: {fileID: 2134796792}
+  - component: {fileID: 2134796791}
   m_Layer: 0
   m_Name: watertile-Sheet_0
   m_TagString: Enemy
@@ -14772,6 +14879,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &2134796791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134796786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549c4e25ed40dba49b80bae5aff1ed4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &2134796792
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134796786}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &3566499743933484635
 PrefabInstance:
   m_ObjectHideFlags: 0
