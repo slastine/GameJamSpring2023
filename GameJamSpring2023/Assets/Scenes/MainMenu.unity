@@ -2613,7 +2613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -9194444338107903362, guid: 33a2505748e20d54782950f0caed4627, type: 3}
       propertyPath: theme.volume
-      value: 0.125
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -9194444338107903362, guid: 33a2505748e20d54782950f0caed4627, type: 3}
       propertyPath: sounds.Array.size

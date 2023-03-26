@@ -21,7 +21,12 @@ public class MainMenuUi : MonoBehaviour
 
     public void StartGame() => SceneManager.LoadScene(1);
 
-    public void UpdateMasterVol() => MasterVolumeChanged?.Invoke(MasterVol = MasterVolSlider.value);
+    public void UpdateMasterVol() 
+    {
+        MasterVolumeChanged?.Invoke(MasterVol = MasterVolSlider.value);
+        SfxVolumeChanged?.Invoke(SfxVol = SfxVolSlider.value * MasterVol);
+        MusicVolumeChanged?.Invoke(MusicVol = MusicVolSlider.value * MasterVol);
+    }
     public void UpdateSfxVol() => SfxVolumeChanged?.Invoke(SfxVol = SfxVolSlider.value * MasterVol);
     public void UpdateMusicVol() => MusicVolumeChanged?.Invoke(MusicVol = MusicVolSlider.value * MasterVol);
 }
