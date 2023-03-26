@@ -70,3 +70,9 @@ MonoBehaviour:
     volume: 0.125
     pitch: 3
     source: {fileID: 0}
+  theme:
+    name: theme
+    clip: {fileID: 8300000, guid: 09b2ba122fce3574780235079a1ca52c, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}

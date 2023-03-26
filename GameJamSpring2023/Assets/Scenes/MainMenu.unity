@@ -2606,7 +2606,7 @@ PrefabInstance:
     - target: {fileID: -9194444338107903362, guid: 33a2505748e20d54782950f0caed4627, type: 3}
       propertyPath: theme.clip
       value: 
-      objectReference: {fileID: 8300000, guid: 092ad98b05803b140a60ac11ddaa0bdf, type: 3}
+      objectReference: {fileID: 8300000, guid: 09b2ba122fce3574780235079a1ca52c, type: 3}
     - target: {fileID: -9194444338107903362, guid: 33a2505748e20d54782950f0caed4627, type: 3}
       propertyPath: theme.name
       value: theme
