@@ -656,6 +656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2129314057}
   tether: {fileID: 1420464198}
+  rope: {fileID: 5684218349393734404, guid: d1963536d64dac440b1b79776f51a137, type: 3}
   count: 1
 --- !u!4 &1420464200
 Transform:
@@ -665,7 +666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420464198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.7, y: -3.98, z: 0.055049933}
+  m_LocalPosition: {x: -9.51, y: -3.82, z: 0.055049933}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -747,7 +748,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2473504120443303253, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.403935
+      value: -2.48
       objectReference: {fileID: 0}
     - target: {fileID: 2473504120443303253, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
       propertyPath: m_LocalPosition.y
