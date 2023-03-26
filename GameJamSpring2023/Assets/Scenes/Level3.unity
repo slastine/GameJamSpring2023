@@ -195,6 +195,14 @@ PrefabInstance:
       propertyPath: nodesInScene
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2061033249, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
+      propertyPath: connectedNodes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061033249, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
+      propertyPath: connectedNodes.Array.data[0]
+      value: 
+      objectReference: {fileID: 7550995428583445788}
     - target: {fileID: 2473504120443303250, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3817,3 +3825,14 @@ PrefabInstance:
       objectReference: {fileID: 1442669185}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
+--- !u!114 &7550995428583445788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1801100058414232101, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
+  m_PrefabInstance: {fileID: 7550995428583445787}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce414eca4cbd2e40adf6ac49867e36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
