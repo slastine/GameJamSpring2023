@@ -3198,7 +3198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 1986477247}
   minX: 0
   maxX: 100
   minY: 0
@@ -3214,6 +3214,14 @@ PrefabInstance:
       propertyPath: nodesInScene
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2061033249, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
+      propertyPath: connectedNodes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061033249, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
+      propertyPath: connectedNodes.Array.data[0]
+      value: 
+      objectReference: {fileID: 1193628218}
     - target: {fileID: 2473504120443303250, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3325,6 +3333,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
+--- !u!114 &1193628218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1801100058414232101, guid: 8ef28761e27b3424189fdca00532164f, type: 3}
+  m_PrefabInstance: {fileID: 1193628217}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce414eca4cbd2e40adf6ac49867e36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1707675508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3427,3 +3446,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1986477247 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2473504120443303251, guid: e3e5796fce4bb8140a1bf7092c487ab1, type: 3}
+  m_PrefabInstance: {fileID: 772754804}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1f4ef9aa017a344bb757a6e34ecd97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
