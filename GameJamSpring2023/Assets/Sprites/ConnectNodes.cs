@@ -22,6 +22,7 @@ public class ConnectNodes : MonoBehaviour
                 if (colliders[i].collider.gameObject.GetComponent<Node>() != null)
                 {
                     Node node = colliders[i].collider.gameObject.GetComponent<Node>();
+                    player.transform.position += Vector3.right;
                     if (connectedNodes.Contains(node))
                     {
                         connectedNodes.Remove(node);
@@ -39,6 +40,7 @@ public class ConnectNodes : MonoBehaviour
                         connect.player = this.gameObject;
                         node.gameObject.AddComponent<ChainTest>().player = this.player;
                         node.gameObject.GetComponent<ChainTest>().rope = connect.rope;
+                        player.GetComponent<Player>().connectedTo = node;
                     }
                 }
 

@@ -33,15 +33,18 @@ public class ChainTest : MonoBehaviour
         count = num;
         for(int i = 0; i < gos.Count; i++)
         {
-            if(i == 0 && gos.Count == 1)
+            if(i == 0)
             {
                 gos[i].GetComponents<HingeJoint2D>()[1].connectedBody = player.GetComponent<Rigidbody2D>();
-                gos[i].GetComponents<HingeJoint2D>()[1].connectedBody = tether.GetComponent<Rigidbody2D>();
-            }
-            else if(i == 0)
-            {
-                gos[i].GetComponents<HingeJoint2D>()[1].connectedBody = player.GetComponent<Rigidbody2D>();
-                gos[i].GetComponents<HingeJoint2D>()[0].connectedBody = gos[i + 1].GetComponent<Rigidbody2D>();
+                if(gos[i] != gos[gos.Count - 1])
+                {
+                    gos[i].GetComponents<HingeJoint2D>()[0].connectedBody = gos[i + 1].GetComponent<Rigidbody2D>();
+                }
+                else
+                {
+                    gos[i].GetComponents<HingeJoint2D>()[0].enabled = false;
+                    AddDistanceJoint(gos[i]);
+                }
             }
             else if(i < gos.Count - 1)
             {
@@ -152,6 +155,7 @@ static int gcd(int a, int b)
         else
         {
             j.connectedAnchor = transform.position;
+            j.connectedBody = toAttach;
         }
     }
 }
