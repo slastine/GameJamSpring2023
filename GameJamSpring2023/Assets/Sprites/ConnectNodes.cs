@@ -35,7 +35,8 @@ public class ConnectNodes : MonoBehaviour
                         node.Activate();
                         ChainTest connect = player.GetComponent<Player>().connectedTo.gameObject.GetComponent<ChainTest>();
                         connect.AddDistanceJoint(connect.gos[0], node.gameObject.GetComponent<Rigidbody2D>());
-                        connect.gos[0].GetComponents<HingeJoint2D>()[1].connectedBody = node.GetComponent<Rigidbody2D>();
+                        connect.gos[0].GetComponent<DistanceJoint2D>().connectedBody = node.gameObject.GetComponent<Rigidbody2D>();
+            connect.gos[0].GetComponents<HingeJoint2D>()[1].connectedBody = node.GetComponent<Rigidbody2D>();
                         connect.player = this.gameObject;
                         node.gameObject.AddComponent<ChainTest>().player = this.player;
                         node.gameObject.GetComponent<ChainTest>().rope = connect.rope;
