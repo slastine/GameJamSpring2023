@@ -21,7 +21,8 @@ public class ChainTest : MonoBehaviour
         tether = this.gameObject;
         rope.GetComponent<SpriteRenderer>().color = colors[PlayerPrefs.GetInt("Color")];
         int num = getCount((Vector2)player.transform.position, (Vector2)tether.transform.position);
-        List<Vector2> ps = getPoints((Vector2)player.transform.position, (Vector2)tether.transform.position, num + 1);
+        if (num < 2) num = 2;
+        List<Vector2> ps = getPoints((Vector2)player.transform.position, (Vector2)tether.transform.position, num);
         for (int i = 0; i < ps.Count; i++)
         {
             GameObject go = Instantiate(rope);
@@ -36,15 +37,7 @@ public class ChainTest : MonoBehaviour
             if(i == 0)
             {
                 gos[i].GetComponents<HingeJoint2D>()[1].connectedBody = player.GetComponent<Rigidbody2D>();
-                if(gos[i] != gos[gos.Count - 1])
-                {
-                    gos[i].GetComponents<HingeJoint2D>()[0].connectedBody = gos[i + 1].GetComponent<Rigidbody2D>();
-                }
-                else
-                {
-                    gos[i].GetComponents<HingeJoint2D>()[0].enabled = false;
-                    AddDistanceJoint(gos[i]);
-                }
+                gos[i].GetComponents<HingeJoint2D>()[0].connectedBody = gos[i + 1].GetComponent<Rigidbody2D>();
             }
             else if(i < gos.Count - 1)
             {
@@ -151,11 +144,12 @@ static int gcd(int a, int b)
         if(toAttach != null)
         {
             j.connectedAnchor = toAttach.gameObject.transform.position;
+            j.connectedBody = toAttach;
         }
         else
         {
             j.connectedAnchor = transform.position;
-            j.connectedBody = toAttach;
+            
         }
     }
 }
