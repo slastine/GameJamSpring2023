@@ -5,7 +5,6 @@ using UnityEngine;
 public class Gizmo : MonoBehaviour
 {
     public bool on;
-    public ChainGen tether;
     public SpriteRenderer ren;
     public Sprite active;
     public Sprite inactive;
