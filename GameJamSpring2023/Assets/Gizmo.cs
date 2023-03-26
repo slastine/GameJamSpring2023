@@ -13,7 +13,7 @@ public class Gizmo : MonoBehaviour
 
     public void Start()
     {
-        lowerLayer.color = tether.colors[PlayerPrefs.GetInt("Color")];
+        lowerLayer.color = ChainGen.colors[PlayerPrefs.GetInt("Color")];
     }
 
     public void Activate()

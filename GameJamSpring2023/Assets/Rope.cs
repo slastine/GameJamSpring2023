@@ -38,10 +38,6 @@ public class Rope : MonoBehaviour
         {
             Debug.Log("Game over");
             SceneManager.LoadScene(5);
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
         }
     }
 }
