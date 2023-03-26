@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public bool grounded => transform.GetChild(0).GetComponent<GroundCheck>().Grounded;
     public float thrust;
     public Vector3 startPos;
-    private Animator animator;
+    public Animator animator;
     private Transform trf;
     private SpriteRenderer sprtrend;
     float PrevInput;

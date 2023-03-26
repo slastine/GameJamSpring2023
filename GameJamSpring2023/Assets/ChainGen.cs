@@ -10,11 +10,11 @@ public class ChainGen : MonoBehaviour
     public GameObject Player;
     public float MaxDist = 16f;
 
-    public List<RopeJoint> Rope = new();
+    public List<RopeJoint> Rope = new List<RopeJoint>();
 
     void Start()
     {
-        Player ??= GameObject.Find("Player");
+        Player = GameObject.Find("Player");
         HingeGen();
     }
 
