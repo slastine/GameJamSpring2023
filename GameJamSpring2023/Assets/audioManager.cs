@@ -7,7 +7,6 @@ public class audioManager : MonoBehaviour
     public Sound[] sounds;
     public Sound theme;
 
-    // Start is called before the first frame update
     void Awake()
     {
         MainMenuUi.MusicVolumeChanged += (v) =>

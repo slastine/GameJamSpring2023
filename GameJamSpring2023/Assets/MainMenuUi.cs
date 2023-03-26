@@ -23,10 +23,22 @@ public class MainMenuUi : MonoBehaviour
 
     public void UpdateMasterVol() 
     {
-        MasterVolumeChanged?.Invoke(MasterVol = MasterVolSlider.value);
-        SfxVolumeChanged?.Invoke(SfxVol = SfxVolSlider.value * MasterVol);
-        MusicVolumeChanged?.Invoke(MusicVol = MusicVolSlider.value * MasterVol);
+        MasterVol = MasterVolSlider.value;
+        SfxVol = SfxVolSlider.value * MasterVol;
+        MusicVol = MusicVolSlider.value * MasterVol;
+
+        MasterVolumeChanged?.Invoke(MasterVol);
+        SfxVolumeChanged?.Invoke(SfxVol);
+        MusicVolumeChanged?.Invoke(MusicVol);
     }
-    public void UpdateSfxVol() => SfxVolumeChanged?.Invoke(SfxVol = SfxVolSlider.value * MasterVol);
-    public void UpdateMusicVol() => MusicVolumeChanged?.Invoke(MusicVol = MusicVolSlider.value * MasterVol);
+    public void UpdateSfxVol()
+    {
+        SfxVol = SfxVolSlider.value * MasterVol;
+        SfxVolumeChanged?.Invoke(SfxVol);
+    }
+    public void UpdateMusicVol() 
+    {
+        MusicVol = MusicVolSlider.value * MasterVol;
+        MusicVolumeChanged?.Invoke(MusicVol);
+    }
 }
