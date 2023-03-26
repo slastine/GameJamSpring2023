@@ -7,7 +7,8 @@ public class ChainTest : MonoBehaviour
 {
     public GameObject player;
     public GameObject tether;
-    public int count = 1;
+    List<GameObject> gos = new List<GameObject>();
+    public int count = 0;
 
     private void Update()
     {
@@ -16,8 +17,27 @@ public class ChainTest : MonoBehaviour
 
         int temp = getCount(p, q);
         if (temp > count) Debug.Log("We need more points");
+        for(int i = 0; i < temp - count; i++)
+        {
+            GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            if(gos.Count > 0)
+            {
+                go.transform.position = (Vector2)gos[gos.Count - 1].transform.position + (Vector2.right * 2);
+            }
+            else
+            {
+                go.transform.position = player.transform.position;
+            }
+            gos.Add(go);
+            for(int j = 0; j < gos.Count; j++)
+            {
+                gos[j].transform.position += Vector3.right;
+            }
+        }
         count = temp;
     }
+
+
 
     static int gcd(int a, int b)
     {
