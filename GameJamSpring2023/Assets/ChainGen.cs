@@ -9,12 +9,14 @@ public class ChainGen : MonoBehaviour
     public uint Count = 5;
     public GameObject Player;
     public float MaxDist = 16f;
+    public Color[] colors;
 
     public List<RopeJoint> Rope = new List<RopeJoint>();
 
     void Start()
     {
         Player = GameObject.Find("Player");
+        Chain.GetComponent<SpriteRenderer>().color = colors[PlayerPrefs.GetInt("Color")];
         HingeGen();
     }
 
@@ -25,6 +27,8 @@ public class ChainGen : MonoBehaviour
         for (uint i = 0; i < Count; i++)
         {
             var c = Instantiate(Chain, transform);
+            c.GetComponent<SpriteRenderer>().color = colors[PlayerPrefs.GetInt("Color")];
+            Debug.Log("*");
             c.transform.Translate(new Vector2(2f + i * Offset, 0));
             var hinges = c.GetComponents<HingeJoint2D>();
             Physics2D.IgnoreCollision(c.GetComponent<Collider2D>(), Player.GetComponent<Collider2D>());
@@ -59,6 +63,7 @@ public class ChainGen : MonoBehaviour
         for (uint i = 0; i < Count; i++)
         {
             var c = Instantiate(Chain, transform);
+            c.GetComponent<SpriteRenderer>().color = colors[PlayerPrefs.GetInt("Color")];
             c.transform.Translate(new Vector2(2f + i * Offset, 0));
             var ropes = c.GetComponents<RopeJoint>();
 

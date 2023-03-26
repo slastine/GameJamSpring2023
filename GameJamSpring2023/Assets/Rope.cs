@@ -33,5 +33,9 @@ public class Rope : MonoBehaviour
         {
             ConnectedNode = collision.collider.gameObject;
         }
+        if (collision.collider.CompareTag("Enemy"))
+        {
+            Debug.Log("Game over");
+        }
     }
 }
