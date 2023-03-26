@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Rope : MonoBehaviour
@@ -36,6 +37,7 @@ public class Rope : MonoBehaviour
         if (collision.collider.CompareTag("Enemy"))
         {
             Debug.Log("Game over");
+            public void StartGame() => SceneManager.LoadScene(5);
         }
     }
 }
