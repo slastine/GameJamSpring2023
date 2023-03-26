@@ -30,27 +30,5 @@ public class Node : MonoBehaviour
             toActivate[i].OnDisconnect();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Rope"))
-            Activate();
-    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Rope"))
-            Activate();
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Rope"))
-            Deactivate();
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Rope"))
-            Deactivate();
-    }
 }

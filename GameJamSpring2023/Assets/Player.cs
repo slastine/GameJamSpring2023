@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private Transform trf;
     private SpriteRenderer sprtrend;
     float PrevInput;
+    public Node connectedTo;
 
     void Start()
     {

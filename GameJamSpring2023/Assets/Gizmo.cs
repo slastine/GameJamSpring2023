@@ -21,7 +21,7 @@ public class Gizmo : MonoBehaviour
         {
             ren.sprite = inactive;
         }
-        lowerLayer.color = ChainGen.colors[PlayerPrefs.GetInt("Color")];
+        lowerLayer.color = ChainTest.colors[PlayerPrefs.GetInt("Color")];
     }
 
     public void Activate()
